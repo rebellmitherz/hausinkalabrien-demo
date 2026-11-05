@@ -189,7 +189,12 @@ table.fakten th{font-weight:500;color:var(--text-2);width:48%}
   .nav.offen{display:flex}
   .nav a{padding:12px 14px}
   .nav a.knopf{margin:6px 0 0}
-  .hero{padding:30px 0 44px}
+  .hero{padding:22px 0 40px}
+  .hero-bild{order:-1;aspect-ratio:4/3;max-height:340px;margin-bottom:20px}
+  .hero h1{font-size:1.75rem}
+  .hero p.lead{font-size:1.02rem;margin:.55em 0}
+  .hero .aktionen{gap:10px;margin-top:20px}
+  .hero .aktionen a{flex:1 1 100%;text-align:center}
   .abschnitt{padding:52px 0}
   .kontaktbox{padding:28px 22px}
   .kurzfakten{grid-template-columns:repeat(2,1fr)}
