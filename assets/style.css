@@ -7,6 +7,7 @@
   --sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
 }
 *{box-sizing:border-box}
+figure{margin:0}
 html{scroll-behavior:smooth}
 html,body{overflow-x:clip}
 body{margin:0;font-family:var(--sans);color:var(--text);background:var(--weiss);line-height:1.6;font-size:17px;-webkit-font-smoothing:antialiased}
@@ -146,13 +147,13 @@ table.fakten th{font-weight:500;color:var(--text-2);width:48%}
 /* Inhaltsseiten */
 .seitenkopf{background:var(--sand);padding:56px 0 46px}
 .seitenkopf p{color:var(--text-2);max-width:40em;margin:0}
-.artikel{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:start;padding:60px 0}
+.artikel{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:start;padding:60px 22px}
 .artikel .text p{font-size:1.15rem}
 .artikel figure{margin:0}
 .artikel figure img{border-radius:var(--radius);box-shadow:var(--schatten);width:100%}
 .formular{display:grid;gap:14px}
 .formular label{display:flex;flex-direction:column;gap:6px;font-size:.88rem;font-weight:600;color:var(--text-2)}
-.formular input,.formular textarea,.formular select{font:inherit;font-size:1rem;padding:12px 14px;border:1px solid var(--linie);border-radius:10px;background:#fff;color:var(--text)}
+.formular input,.formular textarea,.formular select{width:100%;min-width:0;font:inherit;font-size:1rem;padding:12px 14px;border:1px solid var(--linie);border-radius:10px;background:#fff;color:var(--text)}
 .formular textarea{min-height:150px;resize:vertical}
 .formular .zwei{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 .formular .hinweis{font-size:.85rem;color:var(--text-2);margin:0}
