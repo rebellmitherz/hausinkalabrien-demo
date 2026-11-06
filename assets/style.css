@@ -183,12 +183,9 @@ table.fakten th{font-weight:500;color:var(--text-2);width:48%}
 .flagge i:nth-child(2){background:#fff;animation-delay:.16s}
 .flagge i:nth-child(3){background:#ce2b37;animation-delay:.32s}
 @keyframes flagge-wachsen{to{transform:scaleX(1)}}
-.hero .wrap>div,.hero .wrap>figure{animation:hero-ein .8s ease both}
-.hero .wrap>figure{animation-delay:.15s}
-@keyframes hero-ein{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
 #tipper .caret{display:inline-block;width:2px;height:1em;background:var(--terra);margin-left:2px;vertical-align:-2px;animation:caret-blink .8s steps(1) infinite}
 @keyframes caret-blink{50%{opacity:0}}
-@media (prefers-reduced-motion:reduce){.flagge i,.hero .wrap>div,.hero .wrap>figure{animation:none;transform:none}#tipper .caret{display:none}}
+@media (prefers-reduced-motion:reduce){.flagge i{animation:none;transform:none}#tipper .caret{display:none}}
 
 @media (max-width:980px){
   .hero .wrap,.teaser,.kontaktbox,.detailraster,.artikel{grid-template-columns:1fr}
