@@ -7,7 +7,7 @@
 <meta name="description" content="Immobilien Serratore: Wohnungen und Häuser zum Verkauf in Pizzo, Kalabrien. 5 aktuelle Angebote mit Fotos, Preisen und Wohnflächen.">
 <meta name="theme-color" content="#0e4a5c">
 <link rel="icon" type="image/png" href="assets/favicon.png">
-<link rel="stylesheet" href="assets/style.css?v=5">
+<link rel="stylesheet" href="assets/style.css?v=6">
 </head>
 <body>
 <a class="skip" href="#inhalt">Zum Inhalt</a>
@@ -19,9 +19,9 @@
  </div>
 </header>
 <main id="inhalt">
-<section class="hero"><div class="wrap">
+<section class="hero"><div class="flagge" aria-hidden="true"><i></i><i></i><i></i></div><div class="wrap">
  <div>
-  <div class="ueber">Immobilien Serratore · Pizzo · Kalabrien</div>
+  <div class="ueber" id="tipper" aria-label="Immobilien Serratore · Pizzo · Kalabrien"><span class="tip-text">Immobilien Serratore · Pizzo · Kalabrien</span></div>
   <h1>Immobilien zum Verkauf in Pizzo, Kalabrien</h1>
   <p class="lead">Die Immobilienagentur Serratore Caterina befindet sich auf der tyrrhenischen Kueste in Kalabrien und wenige Kilometern von Lamezia Terme und Internationaler Flughafen.</p>
   <p class="lead">Die Agentur ist auf dem Kauf und Verkauf von Haeuser, Rohbauten, Grundstuecke und Ferienhaeuser (Wohnungen) spezialisiert.</p>
@@ -123,5 +123,20 @@
  <a class="knopf meer" href="mailto:info@hausinkalabrien.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg> E-Mail</a>
 </nav>
 <script src="assets/site.js" defer></script>
+<script>
+(function(){
+  var box=document.getElementById('tipper');if(!box)return;
+  var ziel=box.querySelector('.tip-text');if(!ziel)return;
+  var text=ziel.textContent;
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  ziel.textContent='';
+  var caret=document.createElement('span');caret.className='caret';box.appendChild(caret);
+  var i=0;
+  function schritt(){i++;ziel.textContent=text.slice(0,i);
+    if(i<text.length){setTimeout(schritt,34+Math.random()*30);}
+    else{setTimeout(function(){caret.remove();},1600);}}
+  setTimeout(schritt,500);
+})();
+</script>
 </body>
 </html>
